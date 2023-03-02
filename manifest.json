@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Remove Note Headings",
+  "version": "1.0",
+  "description": "A simple Chrome extension to remove note headings from a website.",
+  "permissions": ["activeTab"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icons": {
+    "128": "picture.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
